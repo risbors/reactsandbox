@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  react:
+    build:
+      context: .
+    ports: 
+      - 8080:3000 # Change 8080 to your preference
+    volumes:
+      - ./:/home/react/app:rw
+    command: >
+      bash -c "npm install 
+      && npm start"
+
+    
